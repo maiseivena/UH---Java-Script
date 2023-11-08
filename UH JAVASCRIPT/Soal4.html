@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Keliling Trapesium</title>
+</head>
+<body>
+    <h1>Hitung Keliling Trapesium</h1>
+    <span>Alas</span><input type="number" id="a">
+    <span>Tinggi</span><input type="number" id="t">
+    <button onclick="hitungKeliling()">Hitung</button>
+    <p id="hasil">Hasil Keliling Trapesium: </p>
+
+    <script>
+        function hitungKeliling() {
+            var alas = parseFloat(document.getElementById("a").value);
+            var tinggi = parseFloat(document.getElementById("t").value);
+
+            // Rumus keliling trapesium jika diketahui alas dan tinggi
+            var sisiA = alas; // Sisi sejajar dengan alas
+            var sisiB = alas; // Sisi sejajar dengan alas
+            var sisiC = tinggi; // Sisi sejajar dengan tinggi
+            var sisiD = tinggi; // Sisi sejajar dengan tinggi
+
+            var keliling = hitungKelilingTrapesium(sisiA, sisiB, sisiC, sisiD);
+            document.getElementById("hasil").innerHTML = "Hasil Keliling Trapesium: " + keliling;
+        }
+
+        function hitungKelilingTrapesium(a, b, c, d) {
+            // Keliling trapesium sama kaki: jumlah semua sisi (a + b + c + d)
+            return a + b + c + d;
+        }
+    </script>
+</body>
+</html>

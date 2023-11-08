@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hitung Kembalian</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Hitung Kembalian</h1>
+    <p>Masukkan harga barang:</p>
+    <input type="text" id="harga" />
+    <p>Masukkan jumlah uang yang dibayarkan:</p>
+    <input type="text" id="bayar" />
+    <button onclick="hitung()">Hitung</button>
+    <p id="hasil"></p>
+  </div>
+  <script>
+    function hitung() {
+      var harga = document.getElementById("harga").value;
+      var bayar = document.getElementById("bayar").value;
+
+      var kembalian = bayar - harga;
+
+      document.getElementById("hasil").innerHTML = "Kembalian: " + kembalian;
+    }
+  </script>
+</body>
+</html>
